@@ -1,0 +1,242 @@
+******************************* STEP1 *********************************
+
+***********OUTPUT: 
+100k
+
+real	0m0.045s
+user	0m0.001s
+sys	0m0.002s
+ 
+1m
+
+real	0m0.006s
+user	0m0.001s
+sys	0m0.002s
+ 
+10m
+
+real	0m0.006s
+user	0m0.001s
+sys	0m0.002s
+ 
+100m
+
+real	0m0.006s
+user	0m0.001s
+sys	0m0.001s
+
+ANALYSIS: 
+
+The read times are relatively similar for each file size. 
+
+
+******************************* STEP2 *********************************
+
+*********OUTPUT:
+
+
+real	0m0.038s
+user	0m0.001s
+sys	0m0.002s
+ 
+test1.txt 1000
+
+real	0m0.010s
+user	0m0.002s
+sys	0m0.003s
+ 
+test1.txt 10000
+
+real	0m0.010s
+user	0m0.002s
+sys	0m0.004s
+ 
+test1.txt 100000
+
+real	0m0.007s
+user	0m0.001s
+sys	0m0.002s
+ 
+test2.txt 100
+
+real	0m0.006s
+user	0m0.001s
+sys	0m0.001s
+ 
+test2.txt 1000
+
+real	0m0.007s
+user	0m0.001s
+sys	0m0.002s
+ 
+test2.txt 10000
+
+real	0m0.009s
+user	0m0.001s
+sys	0m0.002s
+ 
+test2.txt 100000
+
+real	0m0.014s
+user	0m0.003s
+sys	0m0.006s
+ 
+test3.txt 100
+
+real	0m0.006s
+user	0m0.001s
+sys	0m0.001s
+ 
+test3.txt 1000
+
+real	0m0.011s
+user	0m0.003s
+sys	0m0.004s
+ 
+test3.txt 10000
+
+real	0m0.008s
+user	0m0.001s
+sys	0m0.002s
+ 
+test3.txt 100000
+
+real	0m0.006s
+user	0m0.001s
+sys	0m0.001s
+ 
+test4.txt 100
+
+real	0m0.006s
+user	0m0.001s
+sys	0m0.001s
+ 
+test4.txt 1000
+
+real	0m0.009s
+user	0m0.002s
+sys	0m0.003s
+ 
+test4.txt 10000
+
+real	0m0.006s
+user	0m0.001s
+sys	0m0.002s
+ 
+test4.txt 100000
+
+real	0m0.006s
+user	0m0.001s
+sys	0m0.002s
+
+
+Overall, the CPU the time it takes to write data to the disk decreases as buffer size increases. However, this decrease in time is exponential and tends to flatline as the buffer size reaches a point. 
+
+*********************** STEP3 ***************************
+
+**********OUTPUT:
+
+
+real	0m0.013s
+user	0m0.002s
+sys	0m0.005s
+ 
+test2.txt 100
+
+real	0m0.010s
+user	0m0.003s
+sys	0m0.004s
+ 
+test3.txt 100
+
+real	0m0.050s
+user	0m0.017s
+sys	0m0.024s
+ 
+test4.txt 100
+
+real	0m0.407s
+user	0m0.156s
+sys	0m0.212s
+ 
+test1.txt 1000
+
+real	0m0.012s
+user	0m0.001s
+sys	0m0.003s
+ 
+test2.txt 1000
+
+real	0m0.009s
+user	0m0.002s
+sys	0m0.004s
+ 
+test3.txt 1000
+
+real	0m0.039s
+user	0m0.008s
+sys	0m0.023s
+ 
+test4.txt 1000
+
+real	0m0.259s
+user	0m0.054s
+sys	0m0.190s
+ 
+test1.txt 10000
+
+real	0m0.007s
+user	0m0.001s
+sys	0m0.002s
+ 
+test2.txt 10000
+
+real	0m0.008s
+user	0m0.001s
+sys	0m0.003s
+ 
+test3.txt 10000
+
+real	0m0.028s
+user	0m0.004s
+sys	0m0.018s
+ 
+test4.txt 10000
+
+real	0m0.227s
+user	0m0.028s
+sys	0m0.175s
+ 
+test1.txt 100000
+
+real	0m0.008s
+user	0m0.001s
+sys	0m0.003s
+ 
+test2.txt 100000
+
+real	0m0.008s
+user	0m0.001s
+sys	0m0.003s
+ 
+test3.txt 100000
+
+real	0m0.026s
+user	0m0.003s
+sys	0m0.016s
+ 
+test4.txt 100000
+
+real	0m0.253s
+user	0m0.018s
+sys	0m0.165s
+ 
+*******************ANALYSIS:
+
+Overall, the CPU the time it takes to write data to the disk decreases as buffer size increases. However, this decrease in time is exponential and tends to flatline as the buffer size reaches a point. 
+ 
+
+*************************** STEP4 ****************************
+
+Disk performance decreases with the addition of threads, so time is longer for more threads. 
+

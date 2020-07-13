@@ -1,0 +1,32 @@
+Jay Shah
+03/10/2020
+LAB 8: Memory Management 
+
+
+***********FIFO**********:
+
+Implementation:
+
+FIFO deals with page faults by replacing the oldest page with the newest request. I used an array to keep track of the order of page requests, similar to a queue. 
+
+15 page faults, 85 hits 
+
+************LRU**********:
+
+Implementation: 
+
+LRU replaces the least recently used page with the incoming page request. I implemented this algorithm by using an array to track when pages were last used, then filling page requests accordingly. 
+
+22 page faults, 78 hits
+
+************SC***********:
+
+Implementation:
+
+Second Chance replacement follows a Round Robin scheme where pages that have been accessed between consecutive considerations are given a second chance and not replaced. The algorithm is relatively simple as I added another component 'chance' to the struct and  checked this component when looking to replace a page. 
+
+20 page faults, 80 hits
+
+***********************ANALYSIS******************************
+
+Though FIFO is the simplest page replacement algorithm and results in the least number of page faults in this test, it is vulnerable to cases that involve a large number of frames. Second Chance is a variation of FIFO which is useful in cases where page requests widely vary. LRU is a good approximation of MIN, the most optimal page replacement algorithm, though it had the most page faults in this case due to the large number of repeat page requests. 

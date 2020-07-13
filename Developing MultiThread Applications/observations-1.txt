@@ -1,0 +1,1 @@
+ The issue with the code is how the thread numbers repeat and are out of order with the order varying upon each run. The compiler stores i in the main thread memory allocation. When removing the second for loop, the output is exlusively the hello messages from each thread. We still, however, see the repeated thread numbers.

@@ -1,0 +1,14 @@
+The AreaRectangle code provided in the lab explantion didnt work at first because the username was not my username on the computer i used. 
+
+echo is used to print out information in the script
+
+pwd is printing working directory
+
+user is the user of the current directory
+
+echo $(/bin/ls | wc -l) files is a command that counts the number of files in the bin/ls folder. echo pipes the input into ws -l which counts the files based on the number of lines in the folder. 
+
+wc -l $(/bin/ls) checks the number of lines in each file in the directory of/bin/ls
+
+
+
